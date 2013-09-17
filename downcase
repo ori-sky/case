@@ -1,0 +1,12 @@
+#!/bin/sh
+case "$#" in
+0)
+	while read LINE; do
+		echo "$LINE" | tr '[:upper:]' '[:lower:]'
+	done
+	;;
+*)
+	echo "$1" | tr '[:upper:]' '[:lower:]'
+	;;
+esac
+exit 0
